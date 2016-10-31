@@ -30,7 +30,7 @@ template<typename TYPE>
 class statemachine
 {
 public:
-	//virtual HResult init(FILE *fp)=0;
+	virtual HResult init(FILE *fp)=0;
 	statemachine();
 	statemachine(int i);
 
@@ -38,8 +38,8 @@ public:
 	HResult Input(TYPE t);
 	HResult Append(node<TYPE>* p);
 	HResult Append(int loc,//状态
-				   TYPE inp,//输入
-				   int dns);//目标状态
+				TYPE inp,//输入
+				int dns);//目标状态
 	HResult Append();
 	~statemachine();
 private:
@@ -90,9 +90,7 @@ inline HResult statemachine<TYPE>::Append(node<TYPE> * p)
 }
 //添加转移
 template<typename TYPE>
-inline HResult statemachine<TYPE>::Append(int loc,
-										TYPE inp,
-										int dns)
+inline HResult statemachine<TYPE>::Append(int loc,TYPE inp,int dns)
 {
 	node<TYPE> *p = statelist.at(loc)->p;
 	if (p == nullptr) {
