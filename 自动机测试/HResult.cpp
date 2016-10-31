@@ -1,8 +1,6 @@
-#include "stdafx.h"
 #include "HResult.h"
-
-
-HResult::HResult(string str, int i1)
+using namespace xhr;
+HResult::HResult(std::string str, int i1)
 {
 	this->info = str;
 	this->i = i1;

@@ -38,9 +38,6 @@
     <ClCompile Include="自动机测试.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="statemachine.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="HResult.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

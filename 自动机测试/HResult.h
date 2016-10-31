@@ -1,13 +1,14 @@
 #pragma once
 #include<string>
-using namespace std;
-class HResult
-{
-public:
-	int i;
-	string info;
-	HResult(string str, int i1);
-	HResult();
-	~HResult();
-};
+namespace xhr {
+	class HResult
+	{
+	public:
+		int i;
+		std::string info;
+		HResult(std::string str, int i1);
+		HResult();
+		~HResult();
+	};
+}
 
